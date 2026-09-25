@@ -1,2 +1,3 @@
-# static-hours
-Static Hours — browser psychological horror (mobile-friendly)
+# Static Hours
+
+Browser psychological horror. Open index.html via HTTPS.
