@@ -10,8 +10,10 @@ Inspired by the *tone* of grounded horror walking sims (not a clone; original st
 
 Get the game as a ZIP and play offline (after unzipping + a local static server):
 
+- **Release package:** [StaticHours-v1.0.zip](https://github.com/bigoldicky/static-hours/releases/download/v1.0.0/StaticHours-v1.0.zip)
 - **Direct ZIP (main branch):** [https://github.com/bigoldicky/static-hours/archive/refs/heads/main.zip](https://github.com/bigoldicky/static-hours/archive/refs/heads/main.zip)
 - Or on GitHub: click **Code → Download ZIP**
+- Also in-repo: [`dist/StaticHours-v1.0.zip`](https://github.com/bigoldicky/static-hours/raw/main/dist/StaticHours-v1.0.zip)
 
 Unzip, then from the extracted folder:
 
@@ -24,8 +26,6 @@ Open `http://localhost:8765/` on desktop, or `http://<your-LAN-IP>:8765/` on an 
 **Play online (no install):** [https://raw.githack.com/bigoldicky/static-hours/main/index.html](https://raw.githack.com/bigoldicky/static-hours/main/index.html)
 
 > Note: the official GitHub Pages URL may still return **404** until Pages is configured; use the ZIP download or the raw.githack link above.
-
-Packaged release zip (when present): `dist/StaticHours-v1.0.zip` in this repo.
 
 ## How to run
 
@@ -147,5 +147,5 @@ static-hours/
     three.module.js
     PointerLockControls.js
   assets/
-  dist/StaticHours-v1.0.zip   (optional packaged release)
+  dist/StaticHours-v1.0.zip
 ```
