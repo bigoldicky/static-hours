@@ -6,20 +6,32 @@ A first-person psychological horror walking simulator for the browser (desktop +
 
 Inspired by the *tone* of grounded horror walking sims (not a clone; original story/IP).
 
-## iPhone Safari (priority)
+## Download
 
-1. On the machine hosting the files: `python3 -m http.server 8765` from this folder  
-2. On iPhone (same Wi‑Fi): open `http://<LAN-IP>:8765/` in **Safari**  
-3. Tap **New Game** — audio unlocks on tap; use left joystick + right-side look drag + USE / LIGHT / SPRINT
+Get the game as a ZIP and play offline (after unzipping + a local static server):
 
-**Playable path:** `/workspace/withdrawal-house/index.html`
+- **Direct ZIP (main branch):** [https://github.com/bigoldicky/static-hours/archive/refs/heads/main.zip](https://github.com/bigoldicky/static-hours/archive/refs/heads/main.zip)
+- Or on GitHub: click **Code → Download ZIP**
+
+Unzip, then from the extracted folder:
+
+```bash
+python3 -m http.server 8765
+```
+
+Open `http://localhost:8765/` on desktop, or `http://<your-LAN-IP>:8765/` on an iPhone on the same Wi‑Fi (Safari). Any static file server works; ES modules require HTTP (not `file://`).
+
+**Play online (no install):** [https://raw.githack.com/bigoldicky/static-hours/main/index.html](https://raw.githack.com/bigoldicky/static-hours/main/index.html)
+
+> Note: the official GitHub Pages URL may still return **404** until Pages is configured; use the ZIP download or the raw.githack link above.
+
+Packaged release zip (when present): `dist/StaticHours-v1.0.zip` in this repo.
 
 ## How to run
 
-Serve the folder over HTTP (required for ES modules):
+Serve this folder over HTTP (required for ES modules):
 
 ```bash
-cd /workspace/withdrawal-house
 python3 -m http.server 8765
 ```
 
@@ -28,9 +40,7 @@ Then open:
 - Desktop: `http://localhost:8765/`
 - iPhone on same network: `http://<your-machine-ip>:8765/`
 
-Or open via any static host. After the first load, Three.js is local (`js/three.module.js`) so it works offline.
-
-**Entry file:** `/workspace/withdrawal-house/index.html`
+Three.js is vendored at `js/three.module.js`, so a downloaded copy works **offline** once served locally.
 
 ## Controls
 
@@ -53,6 +63,12 @@ Or open via any static host. After the first load, Three.js is local (`js/three.
 - **❚❚** — pause
 
 Large tap targets, `viewport-fit=cover`, safe-area insets, Web Audio unlock on first tap. No keyboard required.
+
+## iPhone Safari (LAN)
+
+1. On the machine hosting the files: `python3 -m http.server 8765` from this folder  
+2. On iPhone (same Wi‑Fi): open `http://<LAN-IP>:8765/` in **Safari**  
+3. Tap **New Game** — audio unlocks on tap; use left joystick + right-side look drag + USE / LIGHT / SPRINT  
 
 ## Story premise
 
@@ -113,9 +129,10 @@ Mouse/look sensitivity, master volume, ambience volume (persisted).
 ## File tree
 
 ```
-withdrawal-house/
+static-hours/
   index.html
   README.md
+  .nojekyll
   css/style.css
   js/
     main.js
@@ -128,5 +145,7 @@ withdrawal-house/
     save.js
     content.js
     three.module.js
-    PointerLockControls.js   (unused fallback; custom look used)
+    PointerLockControls.js
+  assets/
+  dist/StaticHours-v1.0.zip   (optional packaged release)
 ```

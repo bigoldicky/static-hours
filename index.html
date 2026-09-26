@@ -12,10 +12,13 @@
   <script type="importmap">
   {
     "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      "three": "./js/three.module.js"
     }
   }
   </script>
+  <!-- CDN fallback if local Three.js missing:
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}</script>
+  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
